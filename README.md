@@ -15,7 +15,7 @@ class TestThing(CreateScratchDirectoryMixin, unittest.TestCase):
 
         super(TestThing, self).setUp()
 
-        self.local_json_file = self.get_tmppath('example.json')
+        self.local_json_file = self.get_tmp_path('example.json')
         json.dump({'a': 42}, self.local_json_file)
 
         print 'Example file written to scratch dir: {}'.format(self.scratch_dir)
